@@ -42,7 +42,7 @@ struct ProfileDetailView: View {
                             }
                             
                         }))
-//                        .background(Color("bg").opacity(getOpacity()).ignoresSafeArea())
+                        //                        .background(Color("bg").opacity(getOpacity()).ignoresSafeArea())
                         .background(
                             Image("bg")
                                 .opacity(getOpacity()).ignoresSafeArea()
