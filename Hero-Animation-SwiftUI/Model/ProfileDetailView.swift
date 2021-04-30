@@ -16,6 +16,8 @@ struct ProfileDetailView: View {
 
 struct ProfileDetailView_Previews: PreviewProvider {
     static var previews: some View {
+        
+        
         ContentView()
     }
 }
