@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct RecentRowView: View {
+    
+    
     var recent: Profile
     var animation: Namespace.ID
+    
+    
     var body: some View {
         HStack(spacing: 15){
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
