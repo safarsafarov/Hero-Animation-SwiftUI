@@ -12,6 +12,9 @@
 		F671B0252642439C00369F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671B0242642439C00369F51 /* Assets.xcassets */; };
 		F671B0282642439C00369F51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F671B0272642439C00369F51 /* Preview Assets.xcassets */; };
 		F671B032264243C500369F51 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671B031264243C500369F51 /* Profile.swift */; };
+		F671B03526424C4600369F51 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671B03426424C4600369F51 /* Home.swift */; };
+		F671B03726424C6C00369F51 /* RecentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671B03626424C6C00369F51 /* RecentRowView.swift */; };
+		F671B03B264250A800369F51 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671B03A264250A800369F51 /* ProfileDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		F671B0272642439C00369F51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F671B0292642439C00369F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F671B031264243C500369F51 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F671B03426424C4600369F51 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Home.swift; path = "Hero-Animation-SwiftUI/Model/Home.swift"; sourceTree = SOURCE_ROOT; };
+		F671B03626424C6C00369F51 /* RecentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecentRowView.swift; path = "Hero-Animation-SwiftUI/Model/RecentRowView.swift"; sourceTree = SOURCE_ROOT; };
+		F671B03A264250A800369F51 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileDetailView.swift; path = "Hero-Animation-SwiftUI/Model/ProfileDetailView.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		F671B01F2642439900369F51 /* Hero-Animation-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F671B03326424C3800369F51 /* View */,
 				F671B030264243B800369F51 /* Model */,
 				F671B02F264243A900369F51 /* ViewModel */,
 				F671B0202642439900369F51 /* Hero_Animation_SwiftUIApp.swift */,
@@ -86,6 +93,16 @@
 				F671B031264243C500369F51 /* Profile.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F671B03326424C3800369F51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F671B03426424C4600369F51 /* Home.swift */,
+				F671B03626424C6C00369F51 /* RecentRowView.swift */,
+				F671B03A264250A800369F51 /* ProfileDetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F671B0232642439900369F51 /* ContentView.swift in Sources */,
+				F671B03726424C6C00369F51 /* RecentRowView.swift in Sources */,
 				F671B032264243C500369F51 /* Profile.swift in Sources */,
+				F671B03526424C4600369F51 /* Home.swift in Sources */,
 				F671B0212642439900369F51 /* Hero_Animation_SwiftUIApp.swift in Sources */,
+				F671B03B264250A800369F51 /* ProfileDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

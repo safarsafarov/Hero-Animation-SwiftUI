@@ -18,11 +18,11 @@ struct Profile: Identifiable {
 }
 
 let recents = [
-    Profile(id: "iJustine", userName: "pic1", profile: "Hi What'sup", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "iJustine", userName: "pic1", profile: "Hi What'sup", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "iJustine", userName: "pic1", profile: "Hi What'sup", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "iJustine", userName: "pic1", profile: "Hi What'sup", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "iJustine", userName: "pic1", profile: "Hi What'sup", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "iJustine", userName: "pic1", profile: "Hi What'sup", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "iJustine", userName: "pic1", profile: "Hi What'sup", lastMsg: "Fuck off", time: "10:12")
+    Profile(id: "iJustine", userName: "Hi sdfsdfsdfsdfsdf'sup", profile: "pic1", lastMsg: "Fuck off", time: "10:12"),
+    Profile(id: "sdfsdfs", userName: "Hi sdfsdfsdfsdf'sup", profile: "pic2", lastMsg: "Loremsalkassdkjalksdjlaksjd Loremsalkassdkjalksdjlaksjd Loremsalkassdkjalksdjlaksjd Loremsalkassdkjalksdjlaksjd Loremsalkassdkjalksdjlaksjd", time: "10:12"),
+    Profile(id: "sdfsdfsdf", userName: "Hi asdasdasdasd'sup", profile: "pic3", lastMsg: "Fuck off", time: "10:12"),
+    Profile(id: "sdfsdfsd", userName: "Hi asdasdasdasd'sup", profile: "pic4", lastMsg: "Fuck off", time: "10:12"),
+    Profile(id: "sdfsdf", userName: "Hi Whatasdasdasdasdassup", profile: "pic5", lastMsg: "Fuck off", time: "10:12"),
+    Profile(id: "asdasdasd", userName: "Hi sdfsdfsdfsdfsdfsd'sup", profile: "pic6", lastMsg: "Fuck off", time: "10:12"),
+    Profile(id: "1231231243", userName: "Hi What'sup", profile: "pic7", lastMsg: "Fuck off", time: "10:12")
 ]
