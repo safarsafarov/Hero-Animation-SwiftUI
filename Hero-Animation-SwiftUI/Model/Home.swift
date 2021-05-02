@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     var animation: Namespace.ID
+    @EnvironmentObject var profileData: ProfileDetailModel
     var body: some View {
         
         

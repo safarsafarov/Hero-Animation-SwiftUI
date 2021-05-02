@@ -14,11 +14,18 @@ struct RecentRowView: View {
     var animation: Namespace.ID
     
     // Environment Object...
-    @EnvironmentObject var profileData: ProfileDetailModel 
+    @EnvironmentObject var profileData: ProfileDetailModel
     
     var body: some View {
         HStack(spacing: 15){
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                withAnimation{
+                    profileData.selectedProfile = recent
+                    profileData.showProfile.toggle()
+                }
+            }, label: {
+                
+                
                 Image(recent.profile)
                     .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
