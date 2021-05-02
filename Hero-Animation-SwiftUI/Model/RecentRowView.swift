@@ -13,6 +13,8 @@ struct RecentRowView: View {
     var recent: Profile
     var animation: Namespace.ID
     
+    // Environment Object...
+    @EnvironmentObject var profileData: ProfileDetailModel 
     
     var body: some View {
         HStack(spacing: 15){
