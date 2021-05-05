@@ -21,9 +21,9 @@ struct Home: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                     .padding(.top)
+                
                 ForEach(recents){recent in
-                    
-                    RecentRowView(recent: recent, animation: animation)
+                    RecentRowView(recent: recent,animation: animation)
                 }
             })
         })
