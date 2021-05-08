@@ -29,7 +29,9 @@ struct Home: View {
         })
         .overlay(
             ZStack(alignment: .top, content: {
-                
+                if profileData.showProfile {
+                    ProfileDetailView(animation: animation)
+                }
             })
         )
     }
