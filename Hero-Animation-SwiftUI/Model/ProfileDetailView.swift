@@ -15,6 +15,19 @@ struct ProfileDetailView: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 300, height: 300)
+        //Background Color...
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Color("bg")
+                    .ignoresSafeArea()
+                // closing when tapping on background...
+                    .onTapGesture {
+                        withAnimation{
+                            profileData.showProfile.toggle()
+                            profileData.selectedProfile = nil
+                        }
+                    }
+            )
     }
 }
 
