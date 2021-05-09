@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // Animation Namespace...
     @Namespace var animation
+    
+    // StateObject...
+    @StateObject var profileData = ProfileDetailModel()
+    
     var body: some View {
         Home(animation: animation)
+        //setting Environment Object...
+            .environmentObject(profileData)
     }
 }
 

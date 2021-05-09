@@ -11,14 +11,15 @@ struct ProfileDetailView: View {
     var animation: Namespace.ID
     @EnvironmentObject var profileData: ProfileDetailModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(profileData.selectedProfile.profile)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 300, height: 300)
     }
 }
 
 struct ProfileDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        
-        
         ContentView()
     }
 }
