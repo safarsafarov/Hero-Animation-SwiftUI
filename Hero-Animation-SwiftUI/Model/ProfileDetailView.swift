@@ -20,6 +20,7 @@ struct ProfileDetailView: View {
             .background(
                 
                 Color("bg")
+                    .opacity(0.2)
                     .ignoresSafeArea()
                     // closing when tapping on background...
                     .onTapGesture {
