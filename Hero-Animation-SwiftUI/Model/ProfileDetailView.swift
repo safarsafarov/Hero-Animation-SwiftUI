@@ -11,25 +11,27 @@ struct ProfileDetailView: View {
     var animation: Namespace.ID
     @EnvironmentObject var profileData: ProfileDetailModel
     var body: some View {
-        Image(profileData.selectedProfile.profile)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 300, height: 300)
-            //Background Color...
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(
-                
-                Color("bg")
-                    .opacity(0.2)
-                    .ignoresSafeArea()
-                    // closing when tapping on background...
-                    .onTapGesture {
-                        withAnimation{
-                            profileData.showProfile.toggle()
-                            profileData.selectedProfile = nil
+        if profileData.selectedProfile != nil{
+            Image(profileData.selectedProfile.profile)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 300, height: 300)
+                //Background Color...
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(
+                    
+                    Color("bg")
+                        .opacity(0.2)
+                        .ignoresSafeArea()
+                        // closing when tapping on background...
+                        .onTapGesture {
+                            withAnimation{
+                                profileData.showProfile.toggle()
+                                profileData.selectedProfile = nil
+                            }
                         }
-                    }
-            )
+                )
+        }
     }
 }
 
