@@ -25,7 +25,7 @@ struct RecentRowView: View {
                 }
             }, label: {
                 
-           
+                // Without matched geometry effect simply showing...
                 if profileData.showProfile {
                     Image(recent.profile)
                         .resizable()
