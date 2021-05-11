@@ -12,7 +12,6 @@ struct Home: View {
     @EnvironmentObject var profileData: ProfileDetailModel
     var body: some View {
         
-        
         ScrollView(.vertical, showsIndicators: false, content: {
             VStack(alignment: .leading, spacing: 1, content: {
                 Text("WhatsApp")
