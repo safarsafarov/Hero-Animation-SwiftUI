@@ -41,3 +41,23 @@ struct ProfileDetailView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+// Bottom Actions...
+
+struct BottomActions: View {
+    var body: some View {
+        HStack {
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Image(systemName: "message.fill")
+                    .font(.title2)
+                    .foregroundColor(Color("green"))
+            })
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Image(systemName: "info.circle.fill")
+                    .font(.title2)
+                    .foregroundColor(Color("green"))
+            })
+        }
+    }
+}
