@@ -15,6 +15,7 @@ struct ProfileDetailView: View {
             Image(profileData.selectedProfile.profile)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .matchedGeometryEffect(id: profileData.selectedProfile.id, in: animation)
                 .frame(width: 300, height: 300)
                 //Background Color...
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
