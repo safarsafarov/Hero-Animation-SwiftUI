@@ -25,8 +25,14 @@ struct RecentRowView: View {
                 }
             }, label: {
                 
+           
                 if profileData.showProfile {
-                    // Without matched geometry effect simply showing image...
+                    Image(recent.profile)
+                        .resizable()
+                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                        .frame(width: 60, height: 60)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                }else {
                     Image(recent.profile)
                         .resizable()
                         .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
@@ -34,8 +40,7 @@ struct RecentRowView: View {
                         .frame(width: 60, height: 60)
                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 }
-                
-                
+           
             })
             .buttonStyle(PlainButtonStyle())
             
