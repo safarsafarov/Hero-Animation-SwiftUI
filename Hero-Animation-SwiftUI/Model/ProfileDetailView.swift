@@ -59,5 +59,9 @@ struct BottomActions: View {
                     .foregroundColor(Color("green"))
             })
         }
+        .padding(.horizontal, 50)
+        // default frame...
+        .frame(width: 300, height: 50)
+        .background(Color.white)
     }
 }
