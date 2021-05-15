@@ -18,11 +18,11 @@ struct Profile: Identifiable {
 }
 
 let recents = [
-    Profile(id: "iJustine", userName: "Hi what's up how are you doing", profile: "pic1", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "sdfsdfs", userName: "Hi What's up", profile: "pic2", lastMsg: "Hey there!", time: "10:12"),
-    Profile(id: "sdfsdfsdf", userName: "Hi what's up how are you doing", profile: "pic3", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "sdfsdfsd", userName: "Hi What's up", profile: "pic4", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "sdfsdf", userName: "Hi what's up how are you doing", profile: "pic5", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "asdasdasd", userName: "Hi swhat's up how are you doing hey", profile: "pic6", lastMsg: "Fuck off", time: "10:12"),
-    Profile(id: "1231231243", userName: "Hi What'sup", profile: "pic7", lastMsg: "Fuck off", time: "10:12")
+    Profile(id: "iJustine", userName: "ijustine", profile: "pic1", lastMsg: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.", time: "10:12"),
+    Profile(id: "James", userName: "jamescool", profile: "pic2", lastMsg: "I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence", time: "10:12"),
+    Profile(id: "Kevin", userName: "kevin_zero", profile: "pic3", lastMsg: "I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet", time: "10:12"),
+    Profile(id: "Patrick", userName: "patrick_bob", profile: "pic4", lastMsg: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with", time: "10:12"),
+    Profile(id: "Damon", userName: "damonlolz", profile: "pic5", lastMsg: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated", time: "10:12"),
+    Profile(id: "Nick", userName: "nickyminaj", profile: "pic6", lastMsg: "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.", time: "10:12"),
+    Profile(id: "John", userName: "johngreen", profile: "pic7", lastMsg: "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz", time: "10:12")
 ]

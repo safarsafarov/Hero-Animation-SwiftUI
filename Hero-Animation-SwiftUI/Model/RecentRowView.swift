@@ -1,10 +1,3 @@
-//
-//  RecentRowView.swift
-//  Hero-Animation-SwiftUI
-//
-//  Created by codestorm on 2021/5/5.
-//
-
 import SwiftUI
 
 struct RecentRowView: View {
@@ -17,30 +10,32 @@ struct RecentRowView: View {
     @EnvironmentObject var profileData: ProfileDetailModel
     
     var body: some View {
+        
         HStack(spacing: 15){
+            
             Button(action: {
                 withAnimation{
                     profileData.selectedProfile = recent
                     profileData.showProfile.toggle()
                 }
             }, label: {
-                
-                // Without matched geometry effect simply showing...
-                if profileData.showProfile {
+                ZStack {
                     Image(recent.profile)
                         .resizable()
                         .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                         .frame(width: 60, height: 60)
                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                }else {
-                    Image(recent.profile)
-                        .resizable()
-                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                        .matchedGeometryEffect(id: recent.id, in: animation)
-                        .frame(width: 60, height: 60)
-                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    
+                    if !profileData.showProfile {
+                        Image(recent.profile)
+                            .resizable()
+                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                            
+                            .matchedGeometryEffect(id: recent.id, in: animation)
+                            .frame(width: 60, height: 60)
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    }
                 }
-           
             })
             .buttonStyle(PlainButtonStyle())
             

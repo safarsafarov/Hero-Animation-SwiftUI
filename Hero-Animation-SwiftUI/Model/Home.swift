@@ -10,11 +10,14 @@ import SwiftUI
 struct Home: View {
     var animation: Namespace.ID
     @EnvironmentObject var profileData: ProfileDetailModel
+    
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false, content: {
+            
             VStack(alignment: .leading, spacing: 1, content: {
-                Text("WhatsApp")
+                
+                Text("HERO")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -27,7 +30,9 @@ struct Home: View {
             })
         })
         .overlay(
+            
             ZStack(alignment: .top, content: {
+                
                 if profileData.showProfile {
                     ProfileDetailView(animation: animation)
                 }
