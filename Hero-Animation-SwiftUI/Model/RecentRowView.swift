@@ -37,10 +37,13 @@ struct RecentRowView: View {
                     }
                 }
             })
+            // it decreased the highlight color...
             .buttonStyle(PlainButtonStyle())
             
             VStack {
+                
                 HStack {
+                    
                     VStack(alignment: .leading, spacing: 8, content: {
                         Text(recent.userName)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -48,6 +51,7 @@ struct RecentRowView: View {
                             .font(.caption)
                             .foregroundColor(.gray)
                     })
+                    
                     Spacer(minLength: 10)
                     
                     Text(recent.time)
