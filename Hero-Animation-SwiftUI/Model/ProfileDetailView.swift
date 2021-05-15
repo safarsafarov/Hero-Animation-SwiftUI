@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileDetailView: View {
     var animation: Namespace.ID
     @EnvironmentObject var profileData: ProfileDetailModel
+    @GestureState var offset: CGFloat = 0
     var body: some View {
         if profileData.selectedProfile != nil{
             Image(profileData.selectedProfile.profile)
