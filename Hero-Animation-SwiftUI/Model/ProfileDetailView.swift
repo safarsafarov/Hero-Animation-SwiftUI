@@ -27,7 +27,7 @@ struct ProfileDetailView: View {
                         .frame(width: .infinity, height: .infinity)
                         //Background Color...
                         .offset(y: $profileData.offset)
-                        .gesture(DragGesture().updating($offset, body: { value, out, _) in
+                        .gesture(DragGesture().updating($offset, body: { (value, out, _) in
                             out = value.translation.height
                         }).onEnded({ (value) in
                             let offset = profileData.offset > 0 ? profileData.offset: -profileData.offset
@@ -66,31 +66,51 @@ struct ProfileDetailView: View {
                         
                         Spacer()
                     }
-                    else{
-                        
-                        Button(action: {
-                            
-                            withAnimation(.easeInOut) {
-                                profileData.showEnlargedImage.toggle()
-                            }
-                        }, label: {
-                            Image(profileData.selectedProfile.profile)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .overlay(TitleView(recent: profileData.selectedProfile, animation: animation), alignment: .top)
-                        })
-                        .overlay(BottomActions().offset(y: 50),alignment: .bottom)
-                        .matchedGeometryEffect(id: profileData.selectedProfile.id, in: animation)
-                        .frame(width: 300, height: 300)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(
-                            Color("bg")
-                        )
-                    }
+                    .padding()
                 }
+                else{
+                    
+                    Button(action: {
+                        
+                        withAnimation(.easeInOut) {
+                            profileData.showEnlargedImage.toggle()
+                        }
+                    }, label: {
+                        Image(profileData.selectedProfile.profile)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .overlay(TitleView(recent: profileData.selectedProfile, animation: animation), alignment: .top)
+                    })
+                    .overlay(BottomActions().offset(y: 50),alignment: .bottom)
+                    .matchedGeometryEffect(id: profileData.selectedProfile.id, in: animation)
+                    .frame(width: 300, height: 300)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(
+                        Color("bg")
+                            .opacity(0.2)
+                            .ignoresSafeArea()
+                            .onTapGesture {
+                                profileData.showProfile.toggle()
+                                profileData.selectedProfile = nil
+                            }
+                    }
+                )
             }
         }
     }
+    .onChange(of: offset, perform: { value in
+    profileData.offset = offset
+    })
+}
+
+func getOpacity()->Double {
+    
+    let offset = profileData.offset > 0 ? profileData.offset : -profileData.offset
+    
+    let progres = offset / 200
+    
+    return 1 - Double(progres)
+}
 }
 
 
@@ -100,6 +120,24 @@ struct ProfileDetailView_Previews: PreviewProvider {
     }
 }
 
+
+struct TitleView: View {
+    var recent: Profile
+    var animation: Namespace.ID
+    
+    var body: some View{
+        Text(recent.userName)
+            .font(.title2)
+            .fontWeight(.semibold)
+            .foregroundColor(.white)
+            .matchedGeometryEffect(id: "TEXT_(recent.id)", in: animation)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .lineLimit(1)
+            .padding(.vertical, 10)
+            .padding(.horizontal)
+            .background(Color("bg").opacity(0.35))
+    }
+}
 // Bottom Actions...
 
 struct BottomActions: View {
