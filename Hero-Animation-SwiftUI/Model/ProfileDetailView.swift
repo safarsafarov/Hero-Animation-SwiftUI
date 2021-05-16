@@ -63,6 +63,29 @@ struct ProfileDetailView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .matchedGeometryEffect(id: "TEXT_(profileData.selectedProfile.id", in: animation)
+                        
+                        Spacer()
+                    }
+                    else{
+                        
+                        Button(action: {
+                            
+                            withAnimation(.easeInOut) {
+                                profileData.showEnlargedImage.toggle()
+                            }
+                        }, label: {
+                            Image(profileData.selectedProfile.profile)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .overlay(TitleView(recent: profileData.selectedProfile, animation: animation), alignment: .top)
+                        })
+                        .overlay(BottomActions().offset(y: 50),alignment: .bottom)
+                        .matchedGeometryEffect(id: profileData.selectedProfile.id, in: animation)
+                        .frame(width: 300, height: 300)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(
+                            Color("bg")
+                        )
                     }
                 }
             }
