@@ -19,14 +19,15 @@ struct ProfileDetailView: View {
             
             if profileData.selectedProfile != nil{
                 
-                if profileData.showEnglargedImage {
+                if profileData.showEnlargedImage {
+                    
                     Image(profileData.selectedProfile.profile)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .matchedGeometryEffect(id: profileData.selectedProfile.id, in: animation)
                         .frame(width: .infinity, height: .infinity)
                         //Background Color...
-                        .offset(y: $profileData.offset)
+                        .offset(y: profileData.offset)
                         .gesture(DragGesture().updating($offset, body: { (value, out, _) in
                             out = value.translation.height
                         }).onEnded({ (value) in
@@ -41,7 +42,7 @@ struct ProfileDetailView: View {
                             }
                             
                         }))
-                        .background(Color("bg").opacity(getOpacity()).ignoreSafeArea())
+                        .background(Color("bg").opacity(getOpacity()).ignoresSafeArea())
                     
                     HStack(spacing: 20){
                         
@@ -93,24 +94,23 @@ struct ProfileDetailView: View {
                                 profileData.showProfile.toggle()
                                 profileData.selectedProfile = nil
                             }
-                    }
-                )
+                    )
+                }
             }
         }
+        .onChange(of: offset, perform: { value in
+            profileData.offset = offset
+        })
     }
-    .onChange(of: offset, perform: { value in
-    profileData.offset = offset
-    })
-}
-
-func getOpacity()->Double {
     
-    let offset = profileData.offset > 0 ? profileData.offset : -profileData.offset
-    
-    let progres = offset / 200
-    
-    return 1 - Double(progres)
-}
+    func getOpacity()->Double {
+        
+        let offset = profileData.offset > 0 ? profileData.offset : -profileData.offset
+        
+        let progres = offset / 200
+        
+        return 1 - Double(progres)
+    }
 }
 
 
@@ -146,12 +146,12 @@ struct BottomActions: View {
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 Image(systemName: "message.fill")
                     .font(.title2)
-                    .foregroundColor(Color("green"))
+                    .foregroundColor(Color(.green))
             })
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 Image(systemName: "info.circle.fill")
                     .font(.title2)
-                    .foregroundColor(Color("green"))
+                    .foregroundColor(Color(.green))
             })
         }
         .padding(.horizontal, 50)

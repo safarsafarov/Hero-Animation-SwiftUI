@@ -11,4 +11,8 @@ class ProfileDetailModel: ObservableObject {
     @Published var showProfile = false
     
     @Published var selectedProfile : Profile!
+    
+    @Published var showEnlargedImage = false
+    
+    @Published var offset: CGFloat = 0
 }
