@@ -42,7 +42,11 @@ struct ProfileDetailView: View {
                             }
                             
                         }))
-                        .background(Color("bg").opacity(getOpacity()).ignoresSafeArea())
+//                        .background(Color("bg").opacity(getOpacity()).ignoresSafeArea())
+                        .background(
+                            Image("bg")
+                                .opacity(getOpacity()).ignoresSafeArea()
+                        )
                     
                     HStack(spacing: 20){
                         
@@ -87,7 +91,7 @@ struct ProfileDetailView: View {
                     .frame(width: 300, height: 300)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(
-                        Color("bg")
+                        Image("bg")
                             .opacity(0.2)
                             .ignoresSafeArea()
                             .onTapGesture {
@@ -131,11 +135,14 @@ struct TitleView: View {
             .fontWeight(.semibold)
             .foregroundColor(.white)
             .matchedGeometryEffect(id: "TEXT_(recent.id)", in: animation)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             .lineLimit(1)
             .padding(.vertical, 10)
             .padding(.horizontal)
-            .background(Color("bg").opacity(0.35))
+            .background(
+                Image("bg")
+                    .opacity(0.35)
+            )
     }
 }
 // Bottom Actions...
