@@ -16,6 +16,7 @@ struct RecentRowView: View {
             Button(action: {
                 withAnimation{
                     profileData.selectedProfile = recent
+                    
                     profileData.showProfile.toggle()
                 }
             }, label: {
